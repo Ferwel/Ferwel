@@ -49,6 +49,11 @@ public class ListaProductos {
     
         if ((campo.replace(" ","").isEmpty()) || (campo == null))  return true; else return false;
     }
+    
+    /**
+     * Comprueba si el nombre es vacío, si es así lo establece como noNamed, si no lo establece como el nombre
+     * @param nombre nombre de lista
+     */
 
     public ListaProductos(String nombre) {
     	if (parametro_vacio(nombre)) {
@@ -58,10 +63,20 @@ public class ListaProductos {
     	this.nombreLista = nombre;
     	}
     }
+    /**
+     * 
+     * @return Numero de productos
+     */
+    
     public int totalProductos(){
             return this.getNumProductos();
     }
-        
+     
+    /**
+     * Registra un producto en la lista
+     * @param prod productos
+     * @return prod
+     */
     public Producto registraProducto(Producto prod) {
         
         if (listaP.containsKey(prod.getcode())) {
@@ -73,6 +88,11 @@ public class ListaProductos {
         return prod;
     }
 
+    /**
+     * Elimina un producto de la lista
+     * @param codigo codigo del producto
+     * @return prod
+     */
     public Producto descartaProducto(String codigo) { 
         
         Producto prod = encuentraProducto(codigo);
@@ -83,7 +103,12 @@ public class ListaProductos {
         }
         return prod;
     }
-
+    
+    /**
+     * 
+     * @param codigo codigo del producto
+     * @return listaP lista de los productos
+     */
     public Producto encuentraProducto(String codigo) { 
         Producto prod = null;
         
