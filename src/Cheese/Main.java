@@ -1,8 +1,8 @@
 /*
-*	grupo  :
-*	alumno :
-*	n.exp. :
-*	fecha  :
+*	grupo  : 1ºGDAM
+*	alumno : Fernando Renshaw Calderón
+*	n.exp. : 7259
+*	fecha  : 09/06/2022  
  */
 package Cheese;
 
